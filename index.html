@@ -20,288 +20,52 @@
     --radius: 14px;
     --radius-sm: 8px;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-  }
-
-  .wrapper {
-    width: 100%;
-    max-width: 440px;
-  }
-
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+  .wrapper { width: 100%; max-width: 440px; }
   .screen { display: none; }
   .screen.active { display: block; }
-
-  /* LOGIN */
-  .login-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 0.5px solid var(--border);
-    padding: 2rem;
-    box-shadow: 0 2px 24px rgba(0,0,0,0.07);
-  }
-
-  .logo-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 1.5rem;
-  }
-
-  .logo-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 13px;
-    background: linear-gradient(145deg, #e8003d, #9b0030);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .logo-text-block .app-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.2;
-  }
-
+  .login-card { background: var(--card); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+  .logo-row { display: flex; align-items: center; gap: 14px; margin-bottom: 1.5rem; }
+  .logo-icon { width: 52px; height: 52px; border-radius: 13px; background: linear-gradient(145deg, #e8003d, #9b0030); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-text-block .app-name { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.2; }
   .logo-text-block .app-name span { color: var(--red); }
-
-  .logo-text-block .app-sub {
-    font-size: 12px;
-    color: var(--text-hint);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .divider {
-    border: none;
-    border-top: 0.5px solid var(--border);
-    margin: 1.25rem 0;
-  }
-
-  label {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  input[type="password"],
-  input[type="text"],
-  textarea,
-  select {
-    width: 100%;
-    padding: 11px 14px;
-    border: 0.5px solid var(--border-md);
-    border-radius: var(--radius-sm);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: var(--text);
-    background: #fafafa;
-    outline: none;
-    transition: border-color 0.15s;
-    margin-bottom: 14px;
-  }
-
-  input:focus, textarea:focus {
-    border-color: var(--red);
-    background: #fff;
-  }
-
+  .logo-text-block .app-sub { font-size: 12px; color: var(--text-hint); letter-spacing: 0.04em; text-transform: uppercase; }
+  .divider { border: none; border-top: 0.5px solid var(--border); margin: 1.25rem 0; }
+  label { display: block; font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+  input[type="password"], input[type="text"], textarea { width: 100%; padding: 11px 14px; border: 0.5px solid var(--border-md); border-radius: var(--radius-sm); font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text); background: #fafafa; outline: none; transition: border-color 0.15s; margin-bottom: 14px; }
+  input:focus, textarea:focus { border-color: var(--red); background: #fff; }
   textarea { min-height: 76px; resize: vertical; }
-
-  .btn-primary {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(135deg, #e8003d, #b5002f);
-    color: #fff;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.02em;
-    transition: opacity 0.15s, transform 0.1s;
-  }
-
+  .btn-primary { width: 100%; padding: 12px; background: linear-gradient(135deg, #e8003d, #b5002f); color: #fff; border: none; border-radius: var(--radius-sm); font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.15s, transform 0.1s; }
   .btn-primary:hover { opacity: 0.92; }
   .btn-primary:active { transform: scale(0.98); }
-
-  .btn-outline {
-    width: 100%;
-    padding: 11px;
-    background: transparent;
-    border: 0.5px solid var(--border-md);
-    border-radius: var(--radius-sm);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: var(--text-muted);
-    cursor: pointer;
-    margin-top: 8px;
-    transition: background 0.15s;
-  }
-
+  .btn-outline { width: 100%; padding: 11px; background: transparent; border: 0.5px solid var(--border-md); border-radius: var(--radius-sm); font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-muted); cursor: pointer; margin-top: 8px; transition: background 0.15s; }
   .btn-outline:hover { background: #f0f0ee; }
-
-  .error-msg {
-    font-size: 13px;
-    color: var(--red);
-    margin-top: -10px;
-    margin-bottom: 12px;
-  }
-
-  /* CARD STEPS */
-  .step-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 0.5px solid var(--border);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 24px rgba(0,0,0,0.06);
-  }
-
-  .step-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.25rem;
-  }
-
-  .step-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  .step-badge {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--red);
-    background: var(--red-light);
-    padding: 3px 10px;
-    border-radius: 20px;
-  }
-
-  /* PROGRESS */
-  .progress-bar {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 1.25rem;
-  }
-
-  .prog-dot {
-    height: 3px;
-    flex: 1;
-    border-radius: 2px;
-    background: var(--border);
-    transition: background 0.3s;
-  }
-
+  .error-msg { font-size: 13px; color: var(--red); margin-top: -10px; margin-bottom: 12px; }
+  .step-card { background: var(--card); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+  .step-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
+  .step-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); }
+  .step-badge { font-size: 11px; font-weight: 500; color: var(--red); background: var(--red-light); padding: 3px 10px; border-radius: 20px; }
+  .progress-bar { display: flex; gap: 5px; margin-bottom: 1.25rem; }
+  .prog-dot { height: 3px; flex: 1; border-radius: 2px; background: var(--border); transition: background 0.3s; }
   .prog-dot.done { background: var(--red); }
-
-  /* TAGS */
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-bottom: 14px;
-  }
-
-  .tag {
-    font-size: 12px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: #f5f4f2;
-    border: 0.5px solid var(--border-md);
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    user-select: none;
-  }
-
+  .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+  .tag { font-size: 12px; padding: 5px 12px; border-radius: 20px; background: #f5f4f2; border: 0.5px solid var(--border-md); color: var(--text-muted); cursor: pointer; transition: all 0.15s; user-select: none; }
   .tag:hover { border-color: var(--red); color: var(--red); }
   .tag.selected { background: var(--red-light); color: var(--red); border-color: var(--red); font-weight: 500; }
-
-  /* RESULT */
-  .result-box {
-    background: #fafafa;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 1rem 1.1rem;
-    font-size: 13.5px;
-    line-height: 1.75;
-    color: var(--text);
-    white-space: pre-wrap;
-    margin-bottom: 1rem;
-    min-height: 100px;
-  }
-
-  .loading-txt {
-    color: var(--text-hint);
-    font-style: italic;
-    font-size: 13px;
-  }
-
-  .result-label {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-hint);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  /* FOOTER */
-  .footer {
-    text-align: center;
-    font-size: 11px;
-    color: var(--text-hint);
-    margin-top: 1.25rem;
-  }
-
+  .result-box { background: #fafafa; border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.1rem; font-size: 13.5px; line-height: 1.75; color: var(--text); white-space: pre-wrap; margin-bottom: 1rem; min-height: 100px; }
+  .loading-txt { color: var(--text-hint); font-style: italic; font-size: 13px; }
+  .result-label { font-size: 11px; font-weight: 500; color: var(--text-hint); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: block; }
+  .footer { text-align: center; font-size: 11px; color: var(--text-hint); margin-top: 1.25rem; }
   .footer span { color: var(--red); }
-
-  /* SPINNER */
   @keyframes spin { to { transform: rotate(360deg); } }
-  .spinner {
-    width: 16px; height: 16px;
-    border: 2px solid var(--red-light);
-    border-top-color: var(--red);
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-
-  @media (max-width: 480px) {
-    body { padding: 1rem; align-items: flex-start; padding-top: 2rem; }
-  }
+  .spinner { width: 16px; height: 16px; border: 2px solid var(--red-light); border-top-color: var(--red); border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; vertical-align: middle; margin-right: 6px; }
+  @media (max-width: 480px) { body { padding: 1rem; align-items: flex-start; padding-top: 2rem; } }
 </style>
 </head>
 <body>
 <div class="wrapper">
-
-  <!-- LOGIN -->
+ 
   <div id="s-login" class="screen active">
     <div class="login-card">
       <div class="logo-row">
@@ -325,38 +89,30 @@
     </div>
     <div class="footer">Powered by <span>RW Performance</span></div>
   </div>
-
-  <!-- STEP 1 -->
+ 
   <div id="s-q1" class="screen">
     <div class="progress-bar" id="prog1"></div>
     <div class="step-card">
-      <div class="step-header">
-        <div class="step-title">Seu negócio</div>
-        <div class="step-badge">1 de 4</div>
-      </div>
+      <div class="step-header"><div class="step-title">Seu negócio</div><div class="step-badge">1 de 4</div></div>
       <label>Produto ou serviço</label>
-      <textarea id="q-produto" placeholder="Ex: Consultoria financeira para pequenas empresas, software de gestão..."></textarea>
+      <textarea id="q-produto" placeholder="Ex: Consultoria financeira, software de gestão..."></textarea>
       <label>Problema que você resolve</label>
-      <textarea id="q-problema" placeholder="Ex: Ajudo empresas a reduzir custos operacionais em até 30%..."></textarea>
+      <textarea id="q-problema" placeholder="Ex: Ajudo empresas a reduzir custos em até 30%..."></textarea>
       <label>Ticket médio</label>
       <input type="text" id="q-ticket" placeholder="Ex: R$ 3.000/mês, R$ 12.000 à vista..." />
     </div>
     <button class="btn-primary" onclick="goStep(2)">Continuar</button>
     <div class="footer" style="margin-top:1rem;">Powered by <span>RW Performance</span></div>
   </div>
-
-  <!-- STEP 2 -->
+ 
   <div id="s-q2" class="screen">
     <div class="progress-bar" id="prog2"></div>
     <div class="step-card">
-      <div class="step-header">
-        <div class="step-title">O cliente</div>
-        <div class="step-badge">2 de 4</div>
-      </div>
+      <div class="step-header"><div class="step-title">O cliente</div><div class="step-badge">2 de 4</div></div>
       <label>Perfil do cliente</label>
-      <textarea id="q-perfil" placeholder="Ex: Empresário, 40 anos, dono de clínica de estética, fatura R$80k/mês..."></textarea>
+      <textarea id="q-perfil" placeholder="Ex: Empresário, 40 anos, dono de clínica, fatura R$80k/mês..."></textarea>
       <label>Último contato — o que foi dito?</label>
-      <textarea id="q-ultimo" placeholder="Ex: Enviei proposta na semana passada. Disse que precisava pensar..."></textarea>
+      <textarea id="q-ultimo" placeholder="Ex: Enviei proposta. Disse que precisava pensar..."></textarea>
       <label>Tempo sem resposta</label>
       <input type="text" id="q-tempo" placeholder="Ex: 5 dias, 2 semanas, 1 mês..." />
       <label>Etapa atual</label>
@@ -372,15 +128,11 @@
     <button class="btn-outline" onclick="goStep(1)">Voltar</button>
     <div class="footer" style="margin-top:1rem;">Powered by <span>RW Performance</span></div>
   </div>
-
-  <!-- STEP 3 -->
+ 
   <div id="s-q3" class="screen">
     <div class="progress-bar" id="prog3"></div>
     <div class="step-card">
-      <div class="step-header">
-        <div class="step-title">Canal e tom</div>
-        <div class="step-badge">3 de 4</div>
-      </div>
+      <div class="step-header"><div class="step-title">Canal e tom</div><div class="step-badge">3 de 4</div></div>
       <label>Canal de follow up</label>
       <div class="tag-row" id="canal-tags">
         <span class="tag" onclick="selectTag(this,'canal')">WhatsApp</span>
@@ -402,125 +154,120 @@
     <button class="btn-outline" onclick="goStep(2)">Voltar</button>
     <div class="footer" style="margin-top:1rem;">Powered by <span>RW Performance</span></div>
   </div>
-
-  <!-- RESULT -->
+ 
   <div id="s-result" class="screen">
     <div class="progress-bar" id="prog4"></div>
     <div class="step-card">
-      <div class="step-header">
-        <div class="step-title">Resultado</div>
-        <div class="step-badge">4 de 4</div>
-      </div>
+      <div class="step-header"><div class="step-title">Resultado</div><div class="step-badge">4 de 4</div></div>
       <span class="result-label">Estratégia e mensagens geradas pela IA</span>
       <div class="result-box" id="result-text"><span class="loading-txt"><span class="spinner"></span>Gerando seu follow up personalizado...</span></div>
     </div>
-    <button class="btn-primary" onclick="regenerate()">Gerar nova versão</button>
+    <button class="btn-primary" onclick="generateResult()">Gerar nova versão</button>
     <button class="btn-outline" onclick="resetAll()">Novo follow up</button>
     <div class="footer" style="margin-top:1rem;">Powered by <span>RW Performance</span></div>
   </div>
-
+ 
 </div>
-
 <script>
 const SENHA = "Rw@2026@";
+const WEBHOOK = "https://main-production-2ea7.up.railway.app/webhook/followuppro";
 const sel = { etapa:'', canal:'', tom:'' };
-
+ 
 function checkPwd() {
   const v = document.getElementById('pwd-input').value;
-  if (v === SENHA) {
-    showScreen('s-q1'); renderProg('prog1',1);
-  } else {
-    document.getElementById('pwd-error').style.display = 'block';
-  }
+  if (v === SENHA) { showScreen('s-q1'); renderProg('prog1',1); }
+  else { document.getElementById('pwd-error').style.display = 'block'; }
 }
-
+ 
 document.getElementById('pwd-input').addEventListener('keydown', e => { if(e.key==='Enter') checkPwd(); });
-
+ 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
 }
-
+ 
 function renderProg(id, step) {
   const el = document.getElementById(id);
   if(!el) return;
   el.innerHTML = [1,2,3,4].map(i=>`<div class="prog-dot${i<=step?' done':''}"></div>`).join('');
 }
-
+ 
 function selectTag(el, group) {
   document.querySelectorAll(`#${group}-tags .tag`).forEach(t=>t.classList.remove('selected'));
   el.classList.add('selected');
   sel[group] = el.textContent.trim();
 }
-
+ 
 function goStep(step) {
   const screens = ['','s-q1','s-q2','s-q3','s-result'];
   showScreen(screens[step]);
   renderProg('prog'+step, step);
   if(step===4) generateResult();
 }
-
+ 
 function buildPrompt() {
-  return `Você é um especialista em follow up comercial da RW Performance. Com base nos dados abaixo, gere uma resposta estruturada com:
-
+  return `Você é um especialista em follow up comercial da RW Performance. Com base nos dados abaixo, gere:
+ 
 1. ANÁLISE DO MOMENTO (2-3 linhas sobre o cenário do cliente)
 2. ESTRATÉGIA RECOMENDADA (melhor ângulo e justificativa)
 3. 3 IDEIAS DE FOLLOW UP com ângulos distintos (valor, curiosidade, urgência, prova social ou quebra de padrão)
 4. MENSAGENS PRONTAS para o canal: ${sel.canal||'não informado'}
 5. PLANO DE SEQUÊNCIA (próximas ações se não houver resposta e quando parar)
-
+ 
 NEGÓCIO:
 - Produto/serviço: ${document.getElementById('q-produto').value}
 - Problema resolvido: ${document.getElementById('q-problema').value}
 - Ticket médio: ${document.getElementById('q-ticket').value}
-
+ 
 CLIENTE:
 - Perfil: ${document.getElementById('q-perfil').value}
 - Último contato: ${document.getElementById('q-ultimo').value}
 - Tempo sem resposta: ${document.getElementById('q-tempo').value}
 - Etapa: ${sel.etapa||'não informado'}
 - Info extra: ${document.getElementById('q-extra').value||'nenhuma'}
-
+ 
 PREFERÊNCIAS:
 - Canal: ${sel.canal||'não informado'}
 - Tom: ${sel.tom||'profissional'}
-
-Seja direto e personalizado. Evite clichês como "passando para ver se teve chance de ver minha mensagem". Use tom ${(sel.tom||'profissional').toLowerCase()}.`;
+ 
+Seja direto e personalizado. Evite clichês. Use tom ${(sel.tom||'profissional').toLowerCase()}.`;
 }
-
+ 
 async function generateResult() {
   document.getElementById('result-text').innerHTML = '<span class="loading-txt"><span class="spinner"></span>Gerando seu follow up personalizado...</span>';
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch(WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
+        model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
-        messages: [{ role:"user", content: buildPrompt() }]
+        messages: [{ role: 'user', content: buildPrompt() }]
       })
     });
     const data = await res.json();
-    const text = data.content?.map(b=>b.text||'').join('') || 'Erro ao gerar resposta.';
+    const content = data?.content || data?.[0]?.json?.content;
+    const text = Array.isArray(content)
+      ? content.map(b => b.text || '').join('')
+      : (typeof content === 'string' ? content : 'Não foi possível gerar. Tente novamente.');
     document.getElementById('result-text').textContent = text;
   } catch(e) {
     document.getElementById('result-text').textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
   }
 }
-
-function regenerate() { generateResult(); }
-
+ 
 function resetAll() {
-  ['q-produto','q-problema','q-ticket','q-perfil','q-ultimo','q-tempo','q-extra'].forEach(id=>{
-    document.getElementById(id).value='';
+  ['q-produto','q-problema','q-ticket','q-perfil','q-ultimo','q-tempo','q-extra'].forEach(id => {
+    document.getElementById(id).value = '';
   });
-  document.getElementById('pwd-input').value='';
-  document.getElementById('pwd-error').style.display='none';
-  document.querySelectorAll('.tag').forEach(t=>t.classList.remove('selected'));
+  document.getElementById('pwd-input').value = '';
+  document.getElementById('pwd-error').style.display = 'none';
+  document.querySelectorAll('.tag').forEach(t => t.classList.remove('selected'));
   sel.etapa=''; sel.canal=''; sel.tom='';
   showScreen('s-login');
 }
 </script>
 </body>
 </html>
+ 
